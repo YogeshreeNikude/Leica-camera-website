@@ -1,0 +1,419 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-family: "Lob";
+    font-family: 'Lobster', sans-serif;
+    font-weight: lighter;
+}
+
+h2{
+    font-size: 8rem;
+    font-family: 'Lobster', sans-serif;
+    font-weight: lighter;
+}
+
+h3{
+    font-size: 2.7rem;
+    margin-bottom: 0.50rem;
+}
+
+h4{
+    font-size: 3rem;
+}
+
+p{
+    font-size: 1.8rem;
+}
+
+li{
+    font-size: 2rem;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/*############################################################# 1st page #############################################################*/
+
+.nav-container{
+    background: rgb(7, 7, 7);
+}
+
+nav{
+    width:80%;
+    margin: auto;
+    min-height: 10vh;
+    padding: 3rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+li{
+    display: flex;
+    padding: 0 1rem;
+} 
+
+.logo1{
+    flex: 3;
+    position: relative;
+    display: flex;
+} 
+
+.logo1::after{
+    content: "";
+    position: absolute;
+    display: flex;
+    top: 0; 
+    left: 0;
+    width: 6rem;
+    height: 6rem;
+    background: #f54538;  
+    border-radius: 50%;
+    transform: translate(-10%, -20%);
+    mix-blend-mode: screen;
+}
+
+.order{
+    background: #f54538;
+    padding: 1rem 2.5rem;
+    border-radius: 2rem;
+}
+
+.fe{
+    background: #f54538;
+    padding: 1rem 2.5rem;
+    border-radius: 2rem;
+}
+
+.home{
+    background: radial-gradient(#525252, #131313);
+}
+
+.showcase{
+    display: grid;
+    min-height: 90vh;
+    grid-template-columns: 10% repeat(3, minmax(5rem, 1fr)) 10%;
+    grid-template-rows: 100px 400px 1fr;
+}
+ 
+h2{
+    grid-column: 2/4;
+    align-self: flex-start;
+    padding-top: 30px;
+}
+
+img{
+    grid-row: 2/3;
+    grid-column: 3/4;
+    height: 120%;
+    object-fit: cover;
+    align-self: center;
+    justify-self: center;
+  /* transform: translate(70px -20px); 
+    padding-bottom: 80px;  */
+}
+
+.info{
+    grid-column: 4/5;
+    grid-row: 3/4; 
+    align-self: flex-end;
+    margin-bottom: 7rem;
+} 
+
+/*################################################### Features styling ################################################*/
+
+.features-container{
+    background: #323232;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.features{
+    min-height: 95vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.features .cards{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.features .card{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    height: 50%;
+    width: 110%;
+    margin: 0 6rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.card img{
+    display: flex;
+    width: 100%;
+    min-height: 60%;  
+    object-position: center; 
+    object-fit: cover;
+}
+
+.card h4{
+    margin-top: 1.5rem;
+} 
+
+.card p{
+    padding: 2rem 1rem 1rem 1rem;
+}  
+
+.wave{
+    position: absolute;
+    left: 0;
+    bottom: -15%;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+}
+
+/*############################################# coming soon #########################################################*/
+
+.soon{
+    background: radial-gradient(#525252, #131313);
+    min-height: 90vh;
+    position: relative;
+    z-index: 0;
+}
+
+.soon .circle{
+    background: #f54538;
+    position: absolute;
+    width: 37%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);   
+}
+ 
+.soon img{
+    position: absolute;
+    top: 52%;
+    left: 53%;
+    width: 40%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.soon h2{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+/*###################################################### Footer styling ##########################################################*/
+
+.footer{
+    background: black;
+    min-height: 10vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer h1{
+    flex: 3;
+    font-size: 3rem;
+}
+
+.footer ul{
+    display: flex;
+    list-style: none;
+}
+
+.footer li{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+
+/*########################################################## Media query ##########################################################*/
+
+@media screen and (max-width: 1200px) {
+    html{
+        font-size: 50%;
+    }
+
+    .nav-container nav{
+        flex: 1;
+    }
+
+    /*.nav-container nav li{
+        margin-left: 2rem;
+    } */
+
+    .showcase{
+        grid-template-columns: 10% 1fr 10%;
+    }
+
+    .showcase img{
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .showcase img, h2, .showcase .info{
+        grid-column: 2/3;
+        text-align: center;
+    }
+
+    .features{
+        align-items: center;
+    }
+
+    .features h2{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .features .cards{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center; 
+        width: 70%;
+        height: 40%;
+    }
+
+    .card{
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }  
+
+    .soon .circle{
+        background: #f54538;
+        position: absolute;
+        width: 90%;
+        height: 70%;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);   
+    }
+     
+    .soon img{
+        position: absolute;
+        top: 52%;
+        left: 53%;
+        width: 90%;
+        height: 60%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+    
+    .soon h2{
+        position: absolute;
+        font-size: 7rem;
+        top: 27%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+    }
+     
+}
+
+
+@media (min-width: 1024px) and (min-height: 1200px){
+    .info{
+        align-self: center;
+    }
+
+    .features-container{
+        min-height: 50vh;
+    }
+    .features h2{
+        margin: 0rem;
+        padding: 0rem;
+    }
+    .features .cards{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center; 
+        width: 120%;
+        height: 40%;
+        margin-bottom: 5rem;
+    }
+
+    .card{
+        flex-direction: column;
+        margin: 5rem;
+        margin-bottom: 1rem;
+        width: 90%;
+        height: 60%;
+    }
+
+    .soon .circle{
+        background: #f54538;
+        position: absolute;
+        width: 90%;
+        height: 70%;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);   
+    }
+     
+    .soon img{
+        position: absolute;
+        top: 52%;
+        left: 53%;
+        width: 90%;
+        height: 60%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+    
+    .soon h2{
+        position: absolute;
+        font-size: 7rem;
+        top: 27%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+    } 
+     
+} 
